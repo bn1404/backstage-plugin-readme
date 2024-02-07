@@ -30,6 +30,8 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
+      - run: yarn add @backstage/cli
+      - run: yarn tsc
       - run: yarn build
       - run: npm publish
         env:
